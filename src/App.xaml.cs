@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace WpfApp1
+namespace GetNovels
 {
     /// <summary>
     /// Interaction logic for App.xaml
