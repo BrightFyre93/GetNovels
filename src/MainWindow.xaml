@@ -21,7 +21,7 @@
             <ColumnDefinition Width="auto"></ColumnDefinition>
             <ColumnDefinition Width="10"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TextBox Name="LinksBox" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="780" Height="374" VerticalScrollBarVisibility="Auto"/>
+        <TextBox Name="Links" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="780" Height="374" VerticalScrollBarVisibility="Auto"/>
         <TextBox Name ="StorageLocation" Grid.Row="3" Grid.Column="3" HorizontalAlignment="Left" TextWrapping="Wrap" Text="D:\Training\Books" Width="200" Height="25"/>
         <TextBox Name="BookName" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Left" TextWrapping="Wrap" Text=""  Width="280" Height="25" Margin="0,0,0,35" Grid.RowSpan="2"/>
         <Label Name="BooksLocationLabel" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Left" Content="Books Location" Width="95" FontWeight="Bold"/>

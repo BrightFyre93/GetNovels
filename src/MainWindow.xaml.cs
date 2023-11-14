@@ -1,11 +1,6 @@
 ﻿using GetNovels.Features;
-using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Net.Http;
 using System.Text;
-using System.Threading;
 using System.Windows;
 
 namespace GetNovels
@@ -47,16 +42,17 @@ namespace GetNovels
             }
 
             DoneLabel.Visibility = Visibility.Hidden;
-            var folderPath = FileService.TryGetPath(StorageLocation.Text);
-            if(string.IsNullOrEmpty(folderPath))
+            var folderPath = FileService.ValidatePath(StorageLocation.Text);
+            if (string.IsNullOrEmpty(folderPath))
                 return;
 
             if (!FileService.TryCreateDirectory(folderPath))
                 return;
 
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
-            var links = LinkService.GetLinks(LinksBox.Text, WebsiteUrl.Text);
-            if (!links.Any()) return;
+            var links = LinkService.GetLinks(Links.Text, WebsiteUrl.Text);
+            if (!links.Any())
+                return;
 
             string filePath = $"{folderPath}\\{BookName.Text}.html";
             UrlService.ConvertUrlToHtml(filePath, links, ChapterCountLabel);
