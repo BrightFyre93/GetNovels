@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Get My Novel" Height="510" Width="810">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="10"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBox Name="LinksBox" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="780" Height="374" VerticalScrollBarVisibility="Auto"/>
+        <TextBox Name ="StorageLocation" Grid.Row="3" Grid.Column="3" HorizontalAlignment="Left" TextWrapping="Wrap" Text="D:\Training\Books" Width="200" Height="25"/>
+        <TextBox Name="BookName" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Left" TextWrapping="Wrap" Text=""  Width="280" Height="25" Margin="0,0,0,35" Grid.RowSpan="2"/>
+        <Label Name="BooksLocationLabel" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Left" Content="Books Location" Width="95" FontWeight="Bold"/>
+        <Label x:Name="BookNameLabel" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" Content="Book Name"  Width="75" FontWeight="Bold"/>
+        <Label x:Name="ChapterCountLabel" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Converted Chapter Count: 0 of 0" FontWeight="Bold" Height="25"/>
+        <Button Name="GetHtmlBtn" Grid.Row="4" Grid.Column="3" Margin="0 5 5 5" Content="Convert URL to HTML" Height="25" Width="200" FontWeight="Bold" Click="ConvertUrlToHtmlBtn_Click"/>
+        <Label x:Name="DoneLabel" Grid.Row="4" Grid.Column="2" Grid.RowSpan="2" VerticalAlignment="Top" Visibility="Hidden" Background="Red" Width="300" Height="32"/>
+        <TextBox x:Name="WebsiteUrl" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="https://novelfull.com"  Width="280" Height="25"/>
+        <Label x:Name="WebsiteurlLabel" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Content="Website URL" Width="100" FontWeight="Bold"/>
+    </Grid>
+</Window>
