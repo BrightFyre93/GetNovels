@@ -11,11 +11,11 @@ namespace GetNovels.Features
         {
             using HttpContent content = response.Content;
             string result = content.ReadAsStringAsync().GetAwaiter().GetResult();
-            result = HttpStringService.RemoveJunk(result);
+            result = HtmlStringService.RemoveJunk(result);
             File.AppendAllText(filePath, result);
         }
 
-        public static string TryGetPath(string folderPath)
+        public static string ValidatePath(string folderPath)
         {
             string path;
             try

@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows;
-using System;
 
 namespace GetNovels.Features
 {
-    public static class HttpStringService
+    public static class HtmlStringService
     {
         public static string RemoveJunk(string result)
         {
